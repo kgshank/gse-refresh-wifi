@@ -1,2 +1,2 @@
-# gse-refresh-wifi
-New Separate Repository for Gnome Shell Extension - Refresh Wifi
+# Gnome Shell Extension - Disconnect Wifi
+This is the new separate repository for easier forking and code separation
