@@ -3,7 +3,8 @@
         "3.10",
         "3.14",
         "3.16",
-        "3.18"
+        "3.18",
+        "3.20"
     ], 
     "uuid": "refresh-wifi@kgshank.net", 
     "name": "Refresh Wifi Connections", 
