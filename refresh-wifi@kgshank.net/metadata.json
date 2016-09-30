@@ -4,12 +4,13 @@
         "3.14",
         "3.16",
         "3.18",
-        "3.20"
+        "3.20",
+        "3.22"
     ], 
     "uuid": "refresh-wifi@kgshank.net", 
     "name": "Refresh Wifi Connections", 
     "description": "gnome-shell does not request for wireless network scan once the wireless selection dialog once the dialog is opened. This extension adds a refresh button to the Wifi connection selection dialog to request for a network scan manually.",
-    "version": "5",
+    "version": "6",
     "original-author": "GopI",
     "url": "https://github.com/kgshank/gse-refresh-wifi"
 }
