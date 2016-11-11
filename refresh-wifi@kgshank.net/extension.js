@@ -38,7 +38,8 @@ function _buildLayoutLocal() {
                                        track_hover: true,
                                        accessible_name: _("Refresh Connections"),
                                        style_class: 'system-menu-action' });
-    refreshButton.child = new St.Icon({ icon_name: "view-refresh-symbolic" });
+    refreshButton.add_style_class_name('refresh-wifi-button');
+    refreshButton.child = new St.Icon({ icon_name: 'view-refresh-symbolic', style_class: 'nm-dialog-icon' });
     refreshButton.connect('clicked', Lang.bind(this, function(){
                     let accessPoints = this._device.get_access_points() || [ ];
                     accessPoints.forEach(Lang.bind(this, function(ap) {
