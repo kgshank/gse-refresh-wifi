@@ -7,12 +7,14 @@
         "3.20",
         "3.22",
         "3.24",
-        "3.26"
+        "3.26",
+        "3.28",
+        "3.30"
     ], 
     "uuid": "refresh-wifi@kgshank.net", 
     "name": "Refresh Wifi Connections", 
     "description": "This extension adds a refresh button to the Wifi connection selection dialog to request for a network scan manually.",
-    "version": "8",
+    "version": "9",
     "original-author": "GopI",
     "url": "https://github.com/kgshank/gse-refresh-wifi"
 }
