@@ -17,16 +17,17 @@ const WirelessDialog = imports.ui.status.network.NMWirelessDialog
 function init() {
 }
 
+/*
 function _scanCompleted() {
     let accessPoints = this._device.get_access_points() || [];
     accessPoints.forEach(function(ap) {
         this._accessPointAdded(this._device, ap);
-    }).bind(this);
+    }.bind(this));
     this._activeApChanged();
     this._updateSensitivity();
     this._syncView();
 }
-
+*/
 function _buildLayoutLocal() {
     this._buildLayoutSuper();
     let refreshButton = new St.Button({
@@ -41,13 +42,14 @@ function _buildLayoutLocal() {
         icon_name : 'view-refresh-symbolic',
         style_class : 'nm-dialog-icon'
     });
-    refreshButton.connect('clicked', function() {
+	/*  refreshButton.connect('clicked', function() {
         let accessPoints = this._device.get_access_points() || [];
         accessPoints.forEach(function(ap) {
             this._accessPointRemoved(this._device, ap);
-        }).bind(this);
-        this._device.request_scan_simple(this._scanCompleted.bind(this));
-    }).bind(this);
+        }.bind(this));
+        this._device.request_scan_async(null,this._scanCompleted.bind(this));
+    }.bind(this));*/
+    refreshButton.connect('clicked', this._onScanTimeout.bind(this));    
     this.contentLayout.first_child.add(refreshButton, {
         expand : true,
         x_fill : false,
@@ -59,7 +61,7 @@ function enable() {
     if (!WirelessDialog.prototype._buildLayoutSuper) {
         WirelessDialog.prototype._buildLayoutSuper = WirelessDialog.prototype._buildLayout;
         WirelessDialog.prototype._buildLayout = _buildLayoutLocal;
-        WirelessDialog.prototype._scanCompleted = _scanCompleted
+        //WirelessDialog.prototype._scanCompleted = _scanCompleted
     }
 }
 
@@ -67,6 +69,6 @@ function disable() {
     if (WirelessDialog.prototype._buildLayoutSuper) {
         WirelessDialog.prototype._buildLayout = WirelessDialog.prototype._buildLayoutSuper;
         delete WirelessDialog.prototype['_buildLayoutSuper'];
-        delete WirelessDialog.prototype['_scanCompleted'];
+        //delete WirelessDialog.prototype['_scanCompleted'];
     }
 }
