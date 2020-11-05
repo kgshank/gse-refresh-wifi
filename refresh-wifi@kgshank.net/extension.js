@@ -35,8 +35,8 @@ function _buildLayoutLocal() {
         label : "Refresh Wifi",
         x_expand : true, 
         y_expand : true,
-        x_fill : true, 
-        y_fill : true,
+       // x_fill : true, 
+       // y_fill : true,
         x_align : Clutter.ActorAlign.END
          
     });
