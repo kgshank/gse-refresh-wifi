@@ -2,7 +2,8 @@
     "shell-version": [
         "3.38",
         "40",
-        "41"
+        "41",
+        "42"
     ], 
     "uuid": "refresh-wifi@kgshank.net", 
     "name": "Refresh Wifi Connections", 
