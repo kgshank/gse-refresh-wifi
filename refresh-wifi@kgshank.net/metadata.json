@@ -8,7 +8,7 @@
     "uuid": "refresh-wifi@kgshank.net", 
     "name": "Refresh Wifi Connections", 
     "description": "This extension adds a refresh button to the Wi-Fi connection selection dialog to manually request for a network scan.\n\nNOTE: In GNOME Shell 3.32 and above, the available network list is automatically updated every 15 seconds, so most people probably don't need this extension anymore.",
-    "version": "16",
+    "version": "17",
     "original-author": "GopI",
     "url": "https://github.com/kgshank/gse-refresh-wifi"
 }
